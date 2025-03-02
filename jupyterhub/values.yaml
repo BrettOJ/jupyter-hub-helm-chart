@@ -188,7 +188,7 @@ proxy:
     rollingUpdate:
   # service relates to the proxy-public service
   service:
-    type: nodePort
+    type: NodePort
     labels: {}
     annotations: {}
     nodePorts:
