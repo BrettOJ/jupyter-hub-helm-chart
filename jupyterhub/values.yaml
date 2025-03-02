@@ -188,12 +188,12 @@ proxy:
     rollingUpdate:
   # service relates to the proxy-public service
   service:
-    type: LoadBalancer
+    type: nodePort
     labels: {}
     annotations: {}
     nodePorts:
-      http:
-      https:
+      http: 30080
+      https: 30443
     disableHttpPort: false
     extraPorts: []
     loadBalancerIP:
