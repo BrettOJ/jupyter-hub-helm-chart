@@ -61,7 +61,7 @@ spec:
             - /image-awaiter
             - -ca-path=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
             - -auth-token-path=/var/run/secrets/kubernetes.io/serviceaccount/token
-            - -api-server-address={{ .Values.prePuller.hook.apiServerAddress }}
+            - -api-server-address={{ .Values.prePuller.hook.apiServerAddress }}:{{ .Values.prePuller.hook.apiServerPort }}
             - -namespace={{ .Release.Namespace }}
             - -daemonset={{ include "jupyterhub.hook-image-puller.fullname" . }}
             - -pod-scheduling-wait-duration={{ .Values.prePuller.hook.podSchedulingWaitDuration }}

@@ -644,7 +644,8 @@ prePuller:
   extraTolerations: []
   # hook relates to the hook-image-awaiter Job and hook-image-puller DaemonSet
   hook:
-    apiServerAddress: https://kubernetes.default.svc:443
+    apiServerAddress: https://kubernetes.default.svc
+    apiServerPort: 443
     enabled: true
     pullOnlyOnChanges: true
     # image and the configuration below relates to the hook-image-awaiter Job
