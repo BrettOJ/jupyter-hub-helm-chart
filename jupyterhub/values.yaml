@@ -70,7 +70,7 @@ hub:
         - ReadWriteOnce
       storage: 1Gi
       subPath:
-      storageClassName: ""
+      storageClassName: "default"
     url:
     password:
   labels: {}
